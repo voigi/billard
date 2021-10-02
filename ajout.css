@@ -1,0 +1,18 @@
+body{
+    background-image: url(pool.JPG);
+    background-size: cover;
+    background-repeat: no-repeat;
+   
+}
+li {
+    counter-increment: li;
+    display: list-item;
+  }
+  
+  li::marker {
+    display: list-item;
+    content: "Joueur " counter(li) " ";
+    color: lightsalmon;
+    font-weight: bold;
+  }
+
