@@ -7,12 +7,17 @@ body{
 li {
     counter-increment: li;
     display: list-item;
-  }
+    text-transform: capitalize;
+   
+}
   
   li::marker {
     display: list-item;
-    content: "Joueur " counter(li) " ";
-    color: lightsalmon;
+    content:url(ball.png) "Joueur " counter(li) " "; 
+    color: red;
     font-weight: bold;
   }
 
+li button{
+ margin-left: 10px;
+}

@@ -11,6 +11,8 @@
 </head>
 
 <body>
+
+    
     <script>
         function date_heure(id) {
             date = new Date;
@@ -45,11 +47,11 @@
     <h1 class="text-center">Liste des joueurs de billard</h1>
 
 
-    <div class="container mt-4">
-
-        <input class="form-control mb-3 text-center" id="text" type="text" name="nom" value="" placeholder="Entrez votre joueur" onkeypress=" if(event.which < 97 || event.which > 122) return 'pas de chiffre svp'">
+    <div class="container mt-4"onKeyPress="if (event.keyCode == 13 ) guardarNumeros()" >
+     
+        <input class="form-control mb-3 text-center" id="text" type="text" name="nom[]" value="" placeholder="Entrez votre joueur" onkeypress=" if(event.which < 97 || event.which > 122) return false">
         <div class="text-center">
-            <button id="submit" type="submit" class="btn btn-primary mb-3" data-toggle="tooltip" data-placement="bottom" title="Ajouter un joueur">Ajouter</button>
+            <button id="submit" type="submit" class="btn btn-primary mb-3" onclick="return guardarNumeros()"  data-toggle="tooltip" data-placement="bottom" title="Ajouter un joueur">Ajouter</button>
             <input id="reset" type="reset" class="btn btn-danger mb-3" value="Annuler" data-toggle="tooltip" data-placement="bottom" title="Je modifie ma saisie">
             <input id="reset" type="button" class="btn btn-danger mb-3" value="Tout effacer" onclick="history.go(0)" data-toggle="tooltip" data-placement="bottom" title="Supprimer tous les joueurs">
         </div>
@@ -63,13 +65,13 @@
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="ajout.js">
+    <script type="text/javascript" src="ajout.js"></script>
 
 
 
 
 
-    </script>
+    
 
 </body>
 
